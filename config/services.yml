@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        bind:
+            $tables: '%tables%'
+
+    kaileymsnay.pcr.listener:
+        class: kaileymsnay\pcr\event\main_listener
+        tags:
+            - { name: event.listener }
